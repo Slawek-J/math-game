@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { InstallButton } from './InstallButton';
 import confetti from 'canvas-confetti';
 
 // --- LEVELS & ACHIEVEMENTS CONFIGURATION ---
@@ -179,7 +180,7 @@ export default function MathGame() {
 
   return (
     <div className={`w-screen h-screen max-h-screen flex flex-col justify-between p-3 sm:p-4 select-none overflow-hidden transition-colors duration-300 ${feedbackStatus === 'correct' ? 'bg-green-100' : feedbackStatus === 'wrong' ? 'bg-red-100' : 'bg-slate-50'}`}>
-      
+      <InstallButton/>
       {/* UNLOCKED ACHIEVEMENT POPUP */}
       {newBadgeAlert && (
         <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-amber-400 text-slate-900 px-5 py-3 rounded-2xl shadow-2xl border-4 border-white flex items-center gap-3 animate-bounce">
